@@ -2,6 +2,7 @@ body {
     font-family: "Courier New", Courier, monospace;
     margin: 0;
     padding: 0;
+    padding-top: 60px;
     background-color: #BD9E89
 }
 
@@ -15,6 +16,18 @@ header {
     background-color: #BD9E89;
     color:white;
     text-align: center;
+}
+
+#home{
+    width: 100%;  
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+    background-color: #BD9E89;
 }
 
 #about {
@@ -82,11 +95,6 @@ section p{
     width: 60%;
 }
 
-img{
-    width: 500px;
-}
-
-
 
 h1 {
     color: white; 
@@ -106,18 +114,22 @@ h3 {
     font-size: 60px;
 }
 
-
-
 nav {
     background-color: #FAEDE0; 
     padding: 10px 0;
+    position: fixed;
+    padding: 10px;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    height: 50px;
 
 }
 
 nav ul {
     list-style-type: none; 
-    padding: 20;
-    margin: 30px;
+    padding: 0;
+    margin: 0;
     display: flex; 
     justify-content: right; 
 }
@@ -132,7 +144,51 @@ nav ul li a {
     font-size: 18px;
     padding: 8px 16px;
 }
+* {box-sizing:border-box}
 
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust this to your preferred size */
+    margin: auto;
+}
 
+.mySlides img {
+    width: 100%; /* Ensures the image scales properly */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: contain; /* Prevents cropping */
+    max-height: 400px; /* Adjust max height to fit within a certain space */
+}
+
+  .mySlides {
+    display: none;
+  }
+  
   
 
+  .prev, .next {
+      position: absolute;
+      top: 50%;                
+      padding: 16px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      user-select: none;
+      transform: translateY(-50%); 
+      z-index: 10;            
+  }
+  
+  .prev {
+      left: 10px;                
+  }
+  
+  .next {
+      right: 10px;                
+  }
+  
+  .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  
